@@ -1,0 +1,70 @@
+{
+  "checkedAtUtc": "2026-09-09T11:49:25.479137+00:00",
+  "url": "https://crawl-timber-nt5k.eu-west-lim-a.onlizard.com",
+  "commit": "df522c15f2771704ec2ab28aadda47293d6ea3b1",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "requestJson": null,
+      "status": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "/docs",
+      "requestJson": null,
+      "status": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "/openapi.json",
+      "requestJson": null,
+      "status": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "/no-such-route",
+      "requestJson": null,
+      "status": 404,
+      "passed": true
+    },
+    {
+      "method": "POST",
+      "path": "/echo",
+      "requestJson": {
+        "message": "hello"
+      },
+      "status": 200,
+      "passed": true
+    },
+    {
+      "method": "POST",
+      "path": "/echo",
+      "requestJson": [],
+      "status": 422,
+      "passed": true
+    }
+  ],
+  "scope": "Functional HTTPS checks, not a load or latency benchmark.",
+  "configuration": {
+    "region": "eu-west-lim-a",
+    "containerPort": 8000,
+    "sourceType": "github",
+    "buildCommandOverride": null,
+    "startCommandOverride": null,
+    "startCommandSource": "Procfile",
+    "pythonTarget": "3.13",
+    "fastapiVersion": "0.141.1",
+    "uvicornVersion": "0.52.4"
+  },
+  "resourceSnapshot": {
+    "checkedAtUtc": "2026-09-09T11:48:31.845575+00:00",
+    "vcpu": 0.001310225,
+    "memoryGb": 0.0337448125,
+    "costPerHour": 0.0005053316877000001,
+    "scope": "Point-in-time resource cost rate, not an invoice. Plan fees, credits and other charges still apply."
+  }
+}
